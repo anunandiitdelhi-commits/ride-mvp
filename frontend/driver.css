@@ -1,0 +1,95 @@
+body {
+
+  margin: 0;
+
+  font-family: Arial, sans-serif;
+
+  background: #111;
+
+  color: white;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  min-height: 100vh;
+
+}
+
+.container {
+  width: 400px;
+}
+
+.card {
+
+  background: #1e1e1e;
+
+  padding: 25px;
+
+  border-radius: 10px;
+
+}
+
+h1 {
+
+  text-align: center;
+
+  color: gold;
+
+  margin-bottom: 20px;
+
+}
+
+input {
+
+  width: 100%;
+
+  padding: 12px;
+
+  margin-bottom: 15px;
+
+  border: none;
+
+  border-radius: 6px;
+
+  background: #2a2a2a;
+
+  color: white;
+
+  box-sizing: border-box;
+
+}
+
+button {
+
+  width: 100%;
+
+  padding: 12px;
+
+  margin-bottom: 10px;
+
+  border: none;
+
+  border-radius: 6px;
+
+  background: gold;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+}
+
+.ride-card {
+
+  background: #2a2a2a;
+
+  padding: 15px;
+
+  border-radius: 8px;
+
+  margin-top: 15px;
+
+}

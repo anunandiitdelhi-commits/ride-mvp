@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Ride MVP Auth</title>
+
+  <link rel="stylesheet" href="auth.css">
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="card">
+
+      <h1>🚕 Ride MVP</h1>
+
+      <input
+        type="text"
+        id="name"
+        placeholder="Name"
+      >
+
+      <input
+        type="text"
+        id="phone"
+        placeholder="Phone"
+      >
+
+      <input
+        type="password"
+        id="password"
+        placeholder="Password"
+      >
+
+      <select id="role">
+
+        <option value="passenger">
+          Passenger
+        </option>
+
+        <option value="driver">
+          Driver
+        </option>
+
+      </select>
+
+      <button onclick="register()">
+        Register
+      </button>
+
+      <button onclick="login()">
+        Login
+      </button>
+
+      <div id="message"></div>
+
+    </div>
+
+  </div>
+
+  <script src="auth.js"></script>
+
+</body>
+</html>

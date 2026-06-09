@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Ride MVP</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet/dist/leaflet.css"
+/>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>🚕 Ride MVP</h1>
+
+
+    <div class="card">
+
+      <h2>Book Ride</h2>
+      <div id="map"></div>
+
+      <input type="text" id="passengerId" placeholder="Passenger ID">
+
+      <input type="text" id="pickup" placeholder="Pickup Location">
+
+      <input type="text" id="drop" placeholder="Drop Location">
+
+      <button onclick="requestRide()">
+        Request Ride
+      </button>
+
+      <div id="result"></div>
+      <div id="rideStatus"></div>
+    </div>
+
+  </div>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>

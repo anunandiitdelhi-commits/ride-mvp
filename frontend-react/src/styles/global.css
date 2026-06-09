@@ -1,0 +1,229 @@
+/* RESET */
+
+* {
+
+  margin: 0;
+
+  padding: 0;
+
+  box-sizing: border-box;
+
+}
+
+
+
+/* BODY */
+
+body {
+
+  font-family: Arial, sans-serif;
+
+  background: #0f0f0f;
+
+  color: white;
+
+}
+
+
+
+/* PAGE */
+
+.page {
+
+  min-height: 100vh;
+
+  padding: 20px;
+
+}
+
+
+
+/* TITLE */
+
+.page-title {
+
+  color: gold;
+
+  font-size: 28px;
+
+  margin-bottom: 20px;
+
+}
+
+
+
+/* CARD */
+
+.card {
+
+  background: #1b1b1b;
+
+  border-radius: 16px;
+
+  padding: 20px;
+
+  margin-top: 15px;
+
+}
+
+
+
+/* BUTTON */
+
+.primary-btn {
+
+  width: 100%;
+
+  padding: 14px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: gold;
+
+  color: black;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  margin-top: 12px;
+
+}
+
+
+
+/* INPUT */
+
+.input {
+
+  width: 100%;
+
+  padding: 14px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #2a2a2a;
+
+  color: white;
+
+  margin-bottom: 15px;
+
+}
+
+
+
+/* MAP */
+
+.map-container {
+
+  height: 500px;
+
+  border-radius: 16px;
+
+  overflow: hidden;
+
+}
+
+
+
+/* STATUS */
+
+.status {
+
+  margin-top: 15px;
+
+  font-size: 18px;
+
+}
+@media (max-width: 768px) {
+
+  .page {
+
+    padding: 12px;
+
+  }
+
+  .page-title {
+
+    font-size: 24px;
+
+  }
+
+  .card {
+
+    padding: 15px;
+
+  }
+
+  .map-container {
+
+    height: 400px;
+
+  }
+
+  .primary-btn {
+
+    padding: 16px;
+
+    font-size: 16px;
+
+  }
+
+}
+button,
+input,
+select {
+
+  -webkit-tap-highlight-color:
+    transparent;
+
+}
+
+
+
+body {
+
+  overscroll-behavior: none;
+
+}
+
+.history-card {
+
+  margin-bottom: 15px;
+
+  border-radius: 12px;
+
+}
+
+.status-completed {
+
+  color: green;
+
+}
+
+.status-cancelled {
+
+  color: red;
+
+}
+
+.status-driver_assigned {
+
+  color: orange;
+
+}
+
+.calc-route-btn {
+  display: block !important;
+  width: 100%;
+  padding: 12px;
+  background: green;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}

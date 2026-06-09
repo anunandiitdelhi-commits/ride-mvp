@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Driver Dashboard</title>
+
+  <link rel="stylesheet" href="driver.css">
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>🚗 Driver Dashboard</h1>
+
+    <div class="card">
+
+      <input
+        type="text"
+        id="driverId"
+        placeholder="Driver ID"
+      >
+
+      <button onclick="goOnline()">
+        Go Online
+      </button>
+
+      <button onclick="loadRides()">
+        <button onclick="simulateMovement()">
+        Simulate Movement
+      </button>
+        Load Assigned Rides
+      </button>
+
+      <div id="rides"></div>
+
+    </div>
+
+  </div>
+
+  <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+  <script src="driver.js"></script>
+
+</body>
+</html>
