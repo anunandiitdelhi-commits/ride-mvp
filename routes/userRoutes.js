@@ -3,7 +3,7 @@ const router = express.Router();
 
 const User = require("../models/User");
 const { getIO } = require("../utils/socket");
-const authMiddleware = require("../middleware/authmiddleware");
+const authMiddleware = require("../middleware/authMiddleware");
 
 // REGISTER USER
 router.post("/register", async (req, res) => {
