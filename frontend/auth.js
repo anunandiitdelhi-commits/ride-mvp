@@ -1,5 +1,5 @@
 const API =
-  "http://localhost:5000/api/auth";
+  "import.meta.env.VITE_API_URI/api/auth";
 
 
 

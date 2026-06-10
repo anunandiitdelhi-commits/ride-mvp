@@ -1,4 +1,4 @@
-const socket = io("http://localhost:5000");
+const socket = io("import.meta.env.VITE_API_URI");
 
 socket.on("connect", () => {
   console.log("✅ Driver connected realtime");
@@ -20,7 +20,7 @@ async function goOnline() {
   try {
 
     const response = await fetch(
-      `http://localhost:5000/api/users/driver/${driverId}/status`,
+      `import.meta.env.VITE_API_URI/api/users/driver/${driverId}/status`,
       {
 
         method: "PUT",
@@ -63,7 +63,7 @@ async function simulateMovement() {
     lng += 0.001;
 
     await fetch(
-      `http://localhost:5000/api/users/driver/${driverId}/status`,
+      `import.meta.env.VITE_API_URI/api/users/driver/${driverId}/status`,
       {
 
         method: "PUT",
@@ -94,7 +94,7 @@ async function loadRides() {
   try {
 
     const response = await fetch(
-      "http://localhost:5000/api/rides"
+      "import.meta.env.VITE_API_URI/api/rides"
     );
 
     const rides = await response.json();
@@ -146,7 +146,7 @@ async function acceptRide(rideId) {
   try {
 
     const response = await fetch(
-      `http://localhost:5000/api/rides/accept/${rideId}`,
+      `import.meta.env.VITE_API_URI/api/rides/accept/${rideId}`,
       {
         method: "PUT"
       }

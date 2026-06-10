@@ -29,13 +29,13 @@ mongoose.connect(process.env.MONGO_URI, {
 }).then(()=> console.log("MongoDB connected") ).catch(err =>console.log(err));
 
 const app = express();
-app.use(cors({origin: ["http://localhost:5174","http://localhost:5175"], credentials:true}));
+app.use(cors({origin: ["http://localhost:5173","http://localhost:5174","http://localhost:5175","https://ride-mvp-git-main-anunandiitdelhi-commits-projects.vercel.app"], credentials:true}));
 
 const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: ["http://localhost:5173","http://localhost:5174","http://localhost:5175"], credentials:true
+    origin: ["http://localhost:5173","http://localhost:5174","http://localhost:5175","https://ride-mvp-main-anunandiitdelhi-commits-projects.vercel.app"], credentials:true
   }
 });
 

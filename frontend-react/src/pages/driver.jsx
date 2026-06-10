@@ -9,7 +9,7 @@ import { API_URL }
 from "../services/api";
 
 const socket =
-  io("http://localhost:5000");
+  io(import.meta.env.VITE_API_URI);
 
 
 

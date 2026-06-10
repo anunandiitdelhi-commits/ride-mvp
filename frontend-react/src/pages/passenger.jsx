@@ -23,7 +23,7 @@ import { getRoute }
 from "../services/routeService";
 
 const socket =
-  io("http://localhost:5000");
+  io("import.meta.env.VITE_API_URI");
 
 
 
