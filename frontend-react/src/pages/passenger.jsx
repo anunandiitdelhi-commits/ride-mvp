@@ -23,7 +23,7 @@ import { getRoute }
 from "../services/routeService";
 
 const socket =
-  io(import.meta.env.VITE_API_URI || "https://zooming-light.up.railway.app");
+  io("https://zooming-light.up.railway.app");
 
 
 
