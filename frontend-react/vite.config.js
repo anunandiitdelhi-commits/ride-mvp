@@ -8,13 +8,13 @@ export default defineConfig({
 server: {
   proxy: {
     '/socket.io': {
-     target: 'http://localhost:5000/',
+     target: 'https://zooming-light.up.railway.app',
      ws : true,
     
     },
 
     '/api':{
-      target: 'http://localhost:5000',
+      target: 'https://zooming-light.up.railway.app',
       changeOrigin: true,
     },
   },
