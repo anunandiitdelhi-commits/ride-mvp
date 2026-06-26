@@ -1,7 +1,7 @@
 import {BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import Login from "./pages/Login";
-import Passenger from "./pages/Passenger";
-import Driver from "./pages/Driver";
+import Login from "./pages/login";
+import Passenger from "./pages/passenger";
+import Driver from "./pages/driver";
 import Admin from "./pages/Admin";
 import PassengerHistory from "./pages/PassengerHistory";
 import DriverHistory from "./pages/DriverHistory";
