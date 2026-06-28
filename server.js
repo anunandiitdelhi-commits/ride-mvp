@@ -51,6 +51,7 @@ const io = new Server(server, {
         callback(new Error('Not allowed'));
       }
     },
+    credentials: true,
     methods: ["GET", "POST"]
   }
 });
