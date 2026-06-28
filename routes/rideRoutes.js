@@ -399,4 +399,33 @@ router.put(
   }
 );
 
+// GET FARE ESTIMATE
+router.get("/fare-estimate", authMiddleware, async (req, res) => {
+  try {
+    const { pickupLat, pickupLng, dropLat, dropLng } = req.query;
+
+    const response = await fetch(
+      `https://api.openrouteservice.org/v2/directions/driving-car?api_key=${process.env.VITE_ORS_API_KEY}&start=${pickupLng},${pickupLat}&end=${dropLng},${dropLat}`
+    );
+
+    const data = await response.json();
+    const distanceM = data.routes[0].summary.distance;
+    const durationS = data.routes[0].summary.duration;
+
+    const distanceKm = distanceM / 1000;
+    const { calculateFare } = require("../utils/fareCalculator");
+    const fare = calculateFare(distanceKm);
+    const etaMinutes = Math.ceil(durationS / 60);
+
+    res.json({
+      distanceKm: distanceKm.toFixed(2),
+      fare,
+      etaMinutes
+    });
+
+  } catch (error) {
+    res.status(500).json({ message: "Fare estimate failed", error: error.message });
+  }
+});
+
 module.exports = router;
