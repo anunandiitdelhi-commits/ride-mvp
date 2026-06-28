@@ -428,4 +428,37 @@ router.get("/fare-estimate", authMiddleware, async (req, res) => {
   }
 });
 
+// GET VEHICLES AVAILABILITY
+router.get("/vehicles/availability", authMiddleware, async (req, res) => {
+  try {
+    const { lat, lng } = req.query;
+
+    const drivers = await User.find({
+      role: "driver",
+      isOnline: true,
+      location: {
+        $near: {
+          $geometry: {
+            type: "Point",
+            coordinates: [parseFloat(lng), parseFloat(lat)]
+          },
+          $maxDistance: 5000
+        }
+      }
+    }).select("role vehicleType location");
+
+    const autos = drivers.filter(d => d.vehicleType === "auto").length;
+    const bikes = drivers.filter(d => d.vehicleType === "bike").length;
+
+    res.json({
+      total: drivers.length,
+      autos,
+      bikes
+    });
+
+  } catch (error) {
+    res.status(500).json({ message: "Availability check failed", error: error.message });
+  }
+});
+
 module.exports = router;
