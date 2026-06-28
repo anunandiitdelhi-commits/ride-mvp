@@ -15,14 +15,14 @@ const authMiddleware =
 
 const roleMiddleware =
   require("../middleware/roleMiddleware");
-console.log("roleMiddleware type:", typeof roleMiddleware);
+
 
 /* GET ALL USERS */
 
 router.get(
   "/users",
-  //authMiddleware,
-  //roleMiddleware(["admin"]),
+  authMiddleware,
+  roleMiddleware(["admin"]),
 
   async (req, res) => {
 
